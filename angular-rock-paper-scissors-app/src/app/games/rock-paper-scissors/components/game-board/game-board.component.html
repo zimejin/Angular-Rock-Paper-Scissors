@@ -1,0 +1,15 @@
+<section>
+  <div class="button-container">
+    <!--Background Triangle-->
+    <div class="bg-triangle"></div>
+    <!--Paper-->
+    <app-paper-button (onClick)="playerMove.emit($event)" id="paper">
+    </app-paper-button>
+    <!--Rock-->
+    <app-rock-button (onClick)="playerMove.emit($event)" id="rock">
+    </app-rock-button>
+    <!--Scissors-->
+    <app-scissors-button (onClick)="playerMove.emit($event)" id="scissors">
+    </app-scissors-button>
+  </div>
+</section>

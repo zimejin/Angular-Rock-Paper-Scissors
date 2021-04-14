@@ -1,0 +1,10 @@
+<div class="button-container">
+  <button
+    type="button"
+    (click)="onClick.emit('Scissors')"
+    class="action-buttons"
+    [ngClass]="{ highlight: highlighted }"
+  >
+    <img src="../../../../assets/images/icon-scissors.svg" />
+  </button>
+</div>

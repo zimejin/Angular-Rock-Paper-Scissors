@@ -1,0 +1,42 @@
+.scoreboard-content {
+  width: 80vw;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
+  border-style: solid;
+  border-color: #606e85;
+  display: flex;
+
+  .scoreboard-score {
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    padding: 1rem;
+    min-width: 50px;
+
+    .score-content {
+      text-align: center;
+      h3 {
+        color: hsl(229, 25%, 31%);
+        font-weight: 700;
+      }
+
+      p {
+        color: hsl(229, 64%, 46%);
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .logo {
+      img {
+        height: 70px;
+      }
+    }
+    .scoreboard-score {
+      height: 45px;
+    }
+  }
+}

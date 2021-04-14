@@ -1,0 +1,51 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  app-rock-button {
+    margin-top: 10rem;
+  }
+}
+
+.bg-triangle {
+  background-image: url("../../../../../assets/images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 600px) {
+  #paper {
+    position: absolute;
+    left: 5%;
+    top: 0%;
+  }
+
+  #scissors {
+    position: absolute;
+    top: 0px;
+    right: 5%;
+  }
+
+  #rock {
+    position: absolute;
+    top: 1%;
+  }
+}

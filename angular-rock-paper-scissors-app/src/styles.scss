@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+
+.mat-dialog-container {
+  background: #ffffff;
+  div.bg {
+    height: 400px;
+    padding: 10px;
+    margin: 10px;
+    background-image: url("./assets/images/image-rules.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

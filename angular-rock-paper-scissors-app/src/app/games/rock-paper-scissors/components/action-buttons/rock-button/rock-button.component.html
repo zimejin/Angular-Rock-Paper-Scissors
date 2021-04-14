@@ -1,0 +1,10 @@
+<div class="button-container">
+  <button
+    type="button"
+    (click)="onClick.emit('Rock')"
+    class="action-buttons"
+    [ngClass]="{ highlight: highlighted }"
+  >
+    <img src="../../../../assets/images/icon-rock.svg" />
+  </button>
+</div>

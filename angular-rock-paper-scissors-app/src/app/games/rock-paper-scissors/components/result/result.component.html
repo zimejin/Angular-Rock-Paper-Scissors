@@ -1,0 +1,35 @@
+<section class="flex-container" id="game-result">
+  <div class="button-container">
+    <!--Player selection-->
+    <div class="selected-item" id="player">
+      <div>
+        <h3>YOU PICKED</h3>
+      </div>
+      <ng-container [ngSwitch]="result?.playerSelection">
+        <app-paper-button *ngSwitchCase="'Paper'" [highlighted]="result?.winner === 'Player'"></app-paper-button>
+        <app-rock-button *ngSwitchCase="'Rock'" [highlighted]="result?.winner === 'Player'"></app-rock-button>
+        <app-scissors-button *ngSwitchCase="'Scissors'" [highlighted]="result?.winner === 'Player'"></app-scissors-button>
+      </ng-container>
+    </div>
+    <!--Computer selection-->
+    <div class="selected-item" id="computer">
+      <div>
+        <h3>THE HOUSE PICKED</h3>
+      </div>
+      <ng-container [ngSwitch]="result?.computerSelection">
+        <app-paper-button *ngSwitchCase="'Paper'" [highlighted]="result?.winner === 'Computer'"></app-paper-button>
+        <app-rock-button *ngSwitchCase="'Rock'" [highlighted]="result?.winner === 'Computer'"></app-rock-button>
+        <app-scissors-button *ngSwitchCase="'Scissors'" [highlighted]="result?.winner === 'Computer'"></app-scissors-button>
+      </ng-container>
+    </div>
+  </div>
+  <!--Result of game-->
+  <div class="result">
+    <div>
+      <h1 *ngIf="result?.winner == 'Computer'">YOU LOSE</h1>
+      <h1 *ngIf="result?.winner == 'Player'">YOU WIN</h1>
+      <h1 *ngIf="result?.winner == 'Draw'">DRAW</h1>
+    </div>
+    <button mat-raised-button (click)="playAgain.emit()">PLAY AGAIN</button>
+  </div>
+</section>

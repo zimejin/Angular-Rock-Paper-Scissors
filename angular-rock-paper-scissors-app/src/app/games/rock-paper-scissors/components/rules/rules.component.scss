@@ -1,0 +1,11 @@
+button {
+  color: #ffffff;
+  width: 150px;
+}
+
+@media screen and (min-width: 600px) {
+  button {
+    position: absolute;
+    right: 20px;
+  }
+}

@@ -1,0 +1,32 @@
+<section>
+  <!--Angular material Grid-->
+  <mat-grid-list cols="1" rowHeight="380px">
+    <!--Scores-->
+    <mat-grid-tile>
+      <app-scoreboard [score]="score"></app-scoreboard>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <!--Game board visible during a session-->
+      <app-game-board
+        (playerMove)="startGame($event)"
+        *ngIf="session; else result"
+      >
+      </app-game-board>
+
+      <!--Game result is displayed on gameover along with the updated score-->
+      <ng-template #result>
+        <app-result
+          [@fadeInOutTranslate]
+          [result]="_result"
+          (playAgain)="restartGame()"
+        ></app-result>
+      </ng-template>
+    </mat-grid-tile>
+
+    <!--Rules modal-->
+    <mat-grid-tile>
+      <app-rules (onClick)="showModal()"></app-rules>
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>
